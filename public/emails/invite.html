@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>Convite para acessar o painel</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f5f6f8;
+        padding: 30px;
+      }
+      .box {
+        max-width: 520px;
+        margin: auto;
+        background: #ffffff;
+        border-radius: 10px;
+        padding: 30px;
+      }
+      .btn {
+        display: inline-block;
+        margin-top: 20px;
+        background: #6366f1;
+        color: #ffffff !important;
+        padding: 12px 18px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .footer {
+        margin-top: 30px;
+        font-size: 12px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h2>Você foi convidada(o)</h2>
+
+      <p>
+        Você recebeu um convite para acessar o painel administrativo do site
+        <strong>lustrous-tulumba-51028a.netlify.app</strong>.
+      </p>
+
+      <p>
+        Pelo painel você poderá editar conteúdos, textos e materiais do site
+        com segurança.
+      </p>
+
+      <a href="{{ .ConfirmationURL }}" class="btn">
+        Aceitar convite e criar senha
+      </a>
+
+      <p class="footer">
+        Se você não esperava este convite, pode ignorar este e-mail.
+      </p>
+    </div>
+  </body>
+</html>

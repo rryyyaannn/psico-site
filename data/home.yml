@@ -1,0 +1,44 @@
+sectionsOrder:
+  - "help"
+  - "approach"
+  - "forWho"
+  - "testimonials"
+  - "recentPosts"
+  - "materials"
+
+sectionsEnabled:
+  help: true
+  approach: true
+  forWho: true
+  testimonials: false
+  recentPosts: true
+  materials: true
+
+helpCards:
+  - title: "Ansiedade e estresse"
+    description: "Entender padrões, reduzir sobrecarga e construir recursos para o cotidiano."
+  - title: "Autocobrança e perfeccionismo"
+    description: "Sair do ciclo de culpa e rigidez, e retomar equilíbrio com gentileza."
+  - title: "Relacionamentos e limites"
+    description: "Comunicação, autoestima e escolhas mais alinhadas ao seu valor."
+
+approach:
+  text: "Um processo terapêutico com acolhimento, clareza e consistência. A ideia é construir compreensão + ação possível, respeitando seu tempo."
+  bullets:
+    - "Escuta ativa e um espaço seguro"
+    - "Psicoeducação (clareza sem simplificar sua dor)"
+    - "Planos práticos e sustentáveis"
+
+forWho:
+  - "Para quem sente que está carregando tudo sozinho"
+  - "Para quem quer organizar pensamentos e emoções"
+  - "Para quem busca autonomia e decisões mais conscientes"
+  - "Para quem vive fases de transição e insegurança"
+
+testimonials:
+  enabled: false
+  items:
+    - name: "Pessoa A"
+      text: "Me senti acolhida e consegui entender padrões que eu repetia há anos."
+    - name: "Pessoa B"
+      text: "Aprendi a colocar limites e a me respeitar mais."

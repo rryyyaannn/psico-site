@@ -1,0 +1,142 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+publish_mode: editorial_workflow
+
+collections:
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - file: "data/settings.yml"
+        label: "Configurações do Site"
+        name: "settings"
+        fields:
+          - { label: "Nome do site", name: "siteName", widget: "string" }
+          - { label: "URL do site (para sitemap/og)", name: "siteUrl", widget: "string", required: false }
+          - { label: "Nome completo", name: "fullName", widget: "string" }
+          - { label: "Bio curta", name: "shortBio", widget: "text" }
+          - { label: "Foto de perfil", name: "profilePhoto", widget: "image" }
+          - { label: "OG Image", name: "ogImage", widget: "image", required: false }
+          - { label: "CRP", name: "crp", widget: "string", required: false }
+
+          - { label: "WhatsApp (número com DDI)", name: "whatsappNumber", widget: "string" }
+          - { label: "Mensagem padrão WhatsApp", name: "whatsappMessage", widget: "string" }
+          - { label: "E-mail", name: "email", widget: "string", required: false }
+          - { label: "Instagram", name: "instagram", widget: "string", required: false }
+          - { label: "YouTube", name: "youtube", widget: "string", required: false }
+          - { label: "Link de agendamento", name: "bookingUrl", widget: "string", required: false }
+
+          - { label: "Analytics habilitado", name: "analyticsEnabled", widget: "boolean", required: false }
+          - { label: "Analytics ID", name: "analyticsId", widget: "string", required: false }
+
+  - name: "services"
+    label: "Serviços"
+    files:
+      - file: "data/services.yml"
+        label: "Lista de Serviços"
+        name: "services"
+        fields:
+          - label: "Serviços"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descrição", name: "description", widget: "text" }
+              - label: "Modalidade"
+                name: "mode"
+                widget: "select"
+                options: ["online", "presencial", "hibrido"]
+              - { label: "Duração", name: "duration", widget: "string", required: false }
+              - { label: "Valor (opcional)", name: "price", widget: "string", required: false }
+
+  - name: "materials"
+    label: "Materiais"
+    files:
+      - file: "data/materials.yml"
+        label: "Vitrine de Materiais"
+        name: "materials"
+        fields:
+          - label: "Materiais"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descrição", name: "description", widget: "text" }
+              - { label: "Imagem", name: "image", widget: "image", required: false }
+              - { label: "Preço (opcional)", name: "price", widget: "string", required: false }
+              - { label: "Link checkout externo", name: "checkoutUrl", widget: "string" }
+
+  - name: "home"
+    label: "Seções da Home"
+    files:
+      - file: "data/home.yml"
+        label: "Configuração da Home"
+        name: "home"
+        fields:
+          - label: "Ordem das seções"
+            name: "sectionsOrder"
+            widget: "list"
+            default: ["help", "approach", "forWho", "testimonials", "recentPosts", "materials"]
+
+          - label: "Habilitar seções"
+            name: "sectionsEnabled"
+            widget: "object"
+            fields:
+              - { label: "Como posso ajudar", name: "help", widget: "boolean" }
+              - { label: "Abordagem", name: "approach", widget: "boolean" }
+              - { label: "Para quem é", name: "forWho", widget: "boolean" }
+              - { label: "Depoimentos", name: "testimonials", widget: "boolean" }
+              - { label: "Conteúdos recentes", name: "recentPosts", widget: "boolean" }
+              - { label: "Materiais", name: "materials", widget: "boolean" }
+
+          - label: "Cards (Como posso ajudar)"
+            name: "helpCards"
+            widget: "list"
+            fields:
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descrição", name: "description", widget: "text" }
+
+          - label: "Abordagem"
+            name: "approach"
+            widget: "object"
+            fields:
+              - { label: "Texto", name: "text", widget: "text" }
+              - label: "Bullets"
+                name: "bullets"
+                widget: "list"
+
+          - label: "Para quem é"
+            name: "forWho"
+            widget: "list"
+
+          - label: "Depoimentos"
+            name: "testimonials"
+            widget: "object"
+            fields:
+              - { label: "Habilitado", name: "enabled", widget: "boolean" }
+              - label: "Itens"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Nome", name: "name", widget: "string" }
+                  - { label: "Texto", name: "text", widget: "text" }
+
+  - name: "posts"
+    label: "Conteúdos (Posts)"
+    folder: "content/posts"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Data", name: "date", widget: "datetime" }
+      - { label: "Tags", name: "tags", widget: "list", required: false }
+      - { label: "Capa", name: "cover", widget: "image", required: false }
+      - { label: "Resumo (excerpt)", name: "excerpt", widget: "string", required: false }
+      - { label: "Corpo", name: "body", widget: "markdown" }

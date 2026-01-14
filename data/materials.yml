@@ -1,0 +1,11 @@
+items:
+  - title: "Guia prático: ansiedade no dia a dia"
+    description: "Estratégias simples para reconhecer gatilhos e criar rotinas de cuidado."
+    image: "/images/post-cover.jpg"
+    price: "R$ 29,90"
+    checkoutUrl: "https://exemplo.com/checkout-guia"
+  - title: "Workbook: autocompaixão e autocobrança"
+    description: "Exercícios para lidar com perfeccionismo e construir um diálogo interno mais gentil."
+    image: "/images/post-cover.jpg"
+    price: "R$ 39,90"
+    checkoutUrl: "https://exemplo.com/checkout-workbook"

@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tokens simples e fáceis de customizar (tema) */
+:root {
+  --bg: 255 255 255;
+  --fg: 17 24 39;
+
+  --card: 255 255 255;
+  --muted: 249 250 251;
+
+  --primary: 99 102 241;     /* indigo */
+  --primary-2: 16 185 129;   /* emerald */
+
+  --border: 229 231 235;
+}
+
+body {
+  color: rgb(var(--fg));
+  background: rgb(var(--bg));
+}
+
+/* Tipografia */
+.prose-content h1,
+.prose-content h2,
+.prose-content h3 {
+  @apply tracking-tight;
+}
+.prose-content p {
+  @apply leading-relaxed;
+}
+
+/* Foco acessível */
+:focus-visible {
+  outline: 3px solid rgb(var(--primary));
+  outline-offset: 3px;
+  border-radius: 10px;
+}

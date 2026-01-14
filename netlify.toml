@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Permite repositório + CMS
+[context.production.environment]
+  NEXT_PUBLIC_SITE_ENV = "production"

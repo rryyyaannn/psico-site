@@ -19,19 +19,22 @@ export default async function HomePage() {
     switch (key) {
       case "help":
         return (
-          <Section title="Como posso ajudar" subtitle="Alguns temas comuns no consultório.">
+          <Section title="Como posso ajudar" subtitle="Alguns temas comuns no consultório." variant="alternate">
             <Cards items={home.helpCards} />
           </Section>
         );
 
       case "approach":
         return (
-          <Section title="Abordagem" subtitle="Um trabalho com acolhimento e clareza.">
-            <div className="rounded-2xl border border-border bg-card p-6 shadow-soft">
-              <p className="text-fg/80 leading-relaxed">{home.approach.text}</p>
-              <ul className="mt-4 list-disc pl-5 text-sm text-fg/75 space-y-2">
+          <Section title="Abordagem" subtitle="Um trabalho com acolhimento e clareza." variant="default">
+            <div className="rounded-2xl border border-[rgb(var(--border))] bg-[rgb(var(--card))] p-10 shadow-sm">
+              <p className="text-lg text-[rgb(var(--muted))] leading-relaxed">{home.approach.text}</p>
+              <ul className="mt-6 space-y-4 text-base text-[rgb(var(--muted))]">
                 {home.approach.bullets.map((b) => (
-                  <li key={b}>{b}</li>
+                  <li key={b} className="flex gap-3">
+                    <span className="mt-0.5 h-2 w-2 rounded-full bg-[rgb(var(--primary))] flex-shrink-0" aria-hidden />
+                    <span className="leading-relaxed">{b}</span>
+                  </li>
                 ))}
               </ul>
             </div>
@@ -40,13 +43,13 @@ export default async function HomePage() {
 
       case "forWho":
         return (
-          <Section title="Para quem é" subtitle="Se você se identifica, podemos conversar.">
-            <div className="rounded-2xl border border-border bg-card p-6 shadow-soft">
-              <ul className="grid md:grid-cols-2 gap-3 text-sm text-fg/75">
+          <Section title="Para quem é" subtitle="Se você se identifica, podemos conversar." variant="alternate">
+            <div className="rounded-2xl border border-[rgb(var(--border))] bg-[rgb(var(--card))] p-10 shadow-sm">
+              <ul className="grid md:grid-cols-2 gap-6 text-base text-[rgb(var(--muted))]">
                 {home.forWho.map((i) => (
-                  <li key={i} className="flex gap-2">
-                    <span className="mt-1 h-2 w-2 rounded-full bg-primary" aria-hidden />
-                    <span>{i}</span>
+                  <li key={i} className="flex gap-3">
+                    <span className="mt-0.5 h-2 w-2 rounded-full bg-[rgb(var(--primary))] flex-shrink-0" aria-hidden />
+                    <span className="leading-relaxed">{i}</span>
                   </li>
                 ))}
               </ul>
@@ -56,21 +59,21 @@ export default async function HomePage() {
 
       case "testimonials":
         return (
-          <Section title="Depoimentos" subtitle="Opcional — você pode habilitar ou desabilitar.">
+          <Section title="Depoimentos" subtitle="Histórias de transformação e acolhimento." variant="default">
             <Testimonials enabled={home.testimonials?.enabled ?? false} items={home.testimonials?.items ?? []} />
           </Section>
         );
 
       case "recentPosts":
         return (
-          <Section title="Conteúdos recentes" subtitle="Textos curtos para reflexão e psicoeducação.">
+          <Section title="Conteúdos recentes" subtitle="Textos curtos para reflexão e psicoeducação." variant="alternate">
             <RecentPosts posts={posts} />
           </Section>
         );
 
       case "materials":
         return (
-          <Section title="Materiais" subtitle="Recursos práticos — compra via links externos.">
+          <Section title="Materiais" subtitle="Recursos práticos — compra via links externos." variant="default">
             <MaterialsGrid items={materials} />
           </Section>
         );
@@ -84,9 +87,19 @@ export default async function HomePage() {
     <>
       <Hero settings={settings} />
 
-      {home.sectionsOrder.map((key) => (
-        <div key={key}>{renderSection(key)}</div>
-      ))}
+      {/* Container com transições suaves entre seções */}
+      <div className="relative">
+        {home.sectionsOrder.map((key, idx) => (
+          <div key={key} className="relative">
+            {renderSection(key)}
+            
+            {/* Divisor visual suave entre seções */}
+            {idx < home.sectionsOrder.length - 1 && (
+              <div className="h-px bg-gradient-to-r from-transparent via-[rgb(var(--primary))]/5 to-transparent" />
+            )}
+          </div>
+        ))}
+      </div>
     </>
   );
 }

@@ -9,40 +9,57 @@ export function Footer({ settings }: { settings: Settings }) {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border/70 bg-muted">
-      <div className="mx-auto max-w-6xl px-4 py-10">
-        <div className="flex flex-col md:flex-row justify-between gap-6">
+    <footer className="relative bg-gradient-to-b from-[rgb(var(--primary-dark))] to-[rgb(var(--primary-dark))]">
+      {/* Separador elegante */}
+      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+      
+      <div className="mx-auto max-w-6xl px-4 py-20 md:py-28">
+        {/* Conteúdo principal */}
+        <div className="grid md:grid-cols-3 gap-12 mb-12">
+          {/* Coluna 1: Sobre */}
           <div>
-            <div className="font-semibold">{settings.siteName}</div>
-            <p className="mt-2 text-sm text-fg/70">
-              Atendimento com acolhimento, clareza e ética.
+            <h3 className="text-lg font-semibold text-white mb-3">{settings.siteName}</h3>
+            <p className="text-sm text-white/75 leading-relaxed">
+              Atendimento com acolhimento, clareza e ética. Psicoterapia online para uma vida mais leve e autêntica.
             </p>
           </div>
 
-          <div className="text-sm">
-            <div className="font-medium">Links</div>
-            <div className="mt-2 flex flex-col gap-2 text-fg/80">
-              <a className="hover:text-fg" href="/privacidade">Privacidade</a>
-              {settings.instagram ? (
-                <a className="hover:text-fg" href={settings.instagram} target="_blank" rel="noreferrer">
+          {/* Coluna 2: Links */}
+          <div>
+            <h4 className="text-sm font-semibold text-white/90 uppercase tracking-wide mb-4">Links</h4>
+            <nav className="space-y-2.5 text-sm">
+              <a href="/privacidade" className="text-white/70 hover:text-white transition-colors">
+                Política de Privacidade
+              </a>
+              {settings.instagram && (
+                <a href={settings.instagram} target="_blank" rel="noreferrer" className="block text-white/70 hover:text-white transition-colors">
                   Instagram
                 </a>
-              ) : null}
-              {settings.youtube ? (
-                <a className="hover:text-fg" href={settings.youtube} target="_blank" rel="noreferrer">
+              )}
+              {settings.youtube && (
+                <a href={settings.youtube} target="_blank" rel="noreferrer" className="block text-white/70 hover:text-white transition-colors">
                   YouTube
                 </a>
-              ) : null}
-              {settings.email ? (
-                <a className="hover:text-fg" href={`mailto:${settings.email}`}>
-                  {settings.email}
-                </a>
-              ) : null}
-            </div>
+              )}
+            </nav>
+          </div>
+
+          {/* Coluna 3: Contato */}
+          <div>
+            <h4 className="text-sm font-semibold text-white/90 uppercase tracking-wide mb-4">Contato</h4>
+            {settings.email && (
+              <a href={`mailto:${settings.email}`} className="text-white/70 hover:text-white transition-colors break-all">
+                {settings.email}
+              </a>
+            )}
           </div>
         </div>
 
-        <div className="mt-10 text-xs text-fg/60">
+        {/* Divisor */}
+        <div className="h-px bg-white/10 mb-8" />
+
+        {/* Copyright */}
+        <div className="text-center text-xs text-white/50">
           © {year} {settings.siteName}. Todos os direitos reservados.
         </div>
       </div>

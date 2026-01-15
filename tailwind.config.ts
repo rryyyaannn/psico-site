@@ -14,7 +14,22 @@ export default {
         border: "rgb(var(--border) / <alpha-value>)"
       },
       boxShadow: {
-        soft: "0 10px 30px rgba(0,0,0,0.08)"
+        soft: "0 4px 20px rgba(0, 0, 0, 0.06)",
+        md: "0 8px 24px rgba(0, 0, 0, 0.08)"
+      },
+      borderRadius: {
+        lg: "0.625rem",
+        xl: "0.75rem"
+      },
+      animation: {
+        blob: "blob 7s infinite",
+      },
+      keyframes: {
+        blob: {
+          "0%, 100%": { transform: "translate(0, 0) scale(1)" },
+          "33%": { transform: "translate(30px, -50px) scale(1.1)" },
+          "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
+        },
       }
     }
   },

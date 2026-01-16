@@ -80,7 +80,8 @@ body::before {
   z-index: 0;
 }
 
-/* Gradiente subtle de fundo */
+/* Scroll suave global */
 html {
+  scroll-behavior: smooth;
   background: linear-gradient(135deg, rgb(var(--bg)) 0%, rgb(var(--surface-alt)) 100%);
 }

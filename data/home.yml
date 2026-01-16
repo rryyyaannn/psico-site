@@ -1,7 +1,5 @@
 sectionsOrder:
   - "help"
-  - "approach"
-  - "forWho"
   - "testimonials"
   - "recentPosts"
   - "materials"
@@ -32,7 +30,6 @@ approach:
 forWho:
   - "Para quem sente que está carregando tudo sozinho"
   - "Para quem quer organizar pensamentos e emoções"
-  - "Para quem busca autonomia e decisões mais conscientes"
   - "Para quem vive fases de transição e insegurança"
 
 testimonials:

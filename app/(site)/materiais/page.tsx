@@ -1,15 +1,6 @@
-import { Section } from "@/components/Section";
-import { MaterialsGrid } from "@/components/MaterialsGrid";
-import { getMaterials } from "@/lib/content";
+import { redirect } from "next/navigation";
 
-export const metadata = { title: "Materiais" };
-
+// Redirecciona para a seção #materiais na home
 export default function MateriaisPage() {
-  const materials = getMaterials();
-
-  return (
-    <Section title="Materiais" subtitle="Materiais digitais com compra via link externo.">
-      <MaterialsGrid items={materials} />
-    </Section>
-  );
+  redirect("/#materiais");
 }

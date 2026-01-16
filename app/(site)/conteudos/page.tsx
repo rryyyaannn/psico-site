@@ -2,13 +2,13 @@ import Link from "next/link";
 import { getAllPosts } from "@/lib/content";
 import { Section } from "@/components/Section";
 
-export const metadata = { title: "Conteúdos" };
+export const metadata = { title: "Todos os Conteúdos" };
 
 export default function ConteudosPage() {
   const posts = getAllPosts();
 
   return (
-    <Section title="Conteúdos" subtitle="Textos de psicoeducação e reflexão.">
+    <Section title="Todos os Conteúdos" subtitle="Explore todos os textos de psicoeducação e reflexão.">
       <div className="grid gap-3">
         {posts.map((p) => (
           <Link

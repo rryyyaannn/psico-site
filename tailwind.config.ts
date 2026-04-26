@@ -10,8 +10,12 @@ export default {
         card: "rgb(var(--card) / <alpha-value>)",
         muted: "rgb(var(--muted) / <alpha-value>)",
         primary: "rgb(var(--primary) / <alpha-value>)",
-        primary2: "rgb(var(--primary-2) / <alpha-value>)",
-        border: "rgb(var(--border) / <alpha-value>)"
+        "primary-dark": "rgb(var(--primary-dark) / <alpha-value>)",
+        "primary-light": "rgb(var(--primary-light) / <alpha-value>)",
+        border: "rgb(var(--border) / <alpha-value>)",
+        brown: "rgb(var(--brown) / <alpha-value>)",
+        surface: "rgb(var(--surface) / <alpha-value>)",
+        "surface-alt": "rgb(var(--surface-alt) / <alpha-value>)"
       },
       boxShadow: {
         soft: "0 4px 20px rgba(0, 0, 0, 0.06)",

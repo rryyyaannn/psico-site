@@ -1,3 +1,5 @@
+import { ExternalLink } from "@/components/ExternalLink";
+
 type Settings = {
   siteName: string;
   instagram?: string;
@@ -32,14 +34,14 @@ export function Footer({ settings }: { settings: Settings }) {
                 Política de Privacidade
               </a>
               {settings.instagram && (
-                <a href={settings.instagram} target="_blank" rel="noreferrer" className="block text-white/70 hover:text-white transition-colors">
+                <ExternalLink href={settings.instagram} target="_blank" className="block text-white/70 hover:text-white transition-colors">
                   Instagram
-                </a>
+                </ExternalLink>
               )}
               {settings.youtube && (
-                <a href={settings.youtube} target="_blank" rel="noreferrer" className="block text-white/70 hover:text-white transition-colors">
+                <ExternalLink href={settings.youtube} target="_blank" className="block text-white/70 hover:text-white transition-colors">
                   YouTube
-                </a>
+                </ExternalLink>
               )}
             </nav>
           </div>

@@ -3,10 +3,11 @@
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
 import { useState } from "react";
+import { ExternalLink } from "@/components/ExternalLink";
 
 type Settings = {
   siteName: string;
-  whatsappUrl: string;
+  whatsappUrl: string | null;
   bookingUrl?: string;
 };
 
@@ -16,10 +17,10 @@ type NavItem = {
 };
 
 const navItems: NavItem[] = [
-  { label: "Sobre mim", anchor: "sobre" },
-  { label: "Como posso ajudar", anchor: "servicos" },
+  { label: "Sobre", anchor: "sobre" },
+  { label: "Serviços", anchor: "produtos" },
+  { label: "Como funciona", anchor: "como-funciona" },
   { label: "Conteúdos", anchor: "conteudos" },
-  { label: "Materiais", anchor: "materiais" },
   { label: "Contato", anchor: "contato" },
 ];
 
@@ -107,26 +108,24 @@ export function Header({ settings }: { settings: Settings }) {
         {/* CTA Buttons */}
         <div className="hidden sm:flex items-center gap-3">
           {settings.bookingUrl ? (
-            <a
+            <ExternalLink
               className="rounded-lg border border-white/20 px-4 py-2 text-sm font-medium text-white hover:bg-white/10 transition-colors"
               href={settings.bookingUrl}
               target="_blank"
-              rel="noreferrer"
               aria-label="Abrir link de agendamento"
             >
               Agendar
-            </a>
+            </ExternalLink>
           ) : null}
 
-          <a
+          <ExternalLink
             className="rounded-lg bg-[rgb(var(--primary))] px-5 py-2 text-sm font-medium text-white hover:bg-[rgb(var(--primary-light))] transition-colors"
             href={settings.whatsappUrl}
             target="_blank"
-            rel="noreferrer"
             aria-label="Conversar no WhatsApp"
           >
             Conversar
-          </a>
+          </ExternalLink>
         </div>
       </div>
 
@@ -154,25 +153,23 @@ export function Header({ settings }: { settings: Settings }) {
             {/* CTA no mobile menu */}
             <div className="pt-3 mt-3 border-t border-white/10 space-y-2">
               {settings.bookingUrl ? (
-                <a
+                <ExternalLink
                   className="block w-full text-center rounded-lg border border-white/20 px-4 py-2 text-sm font-medium text-white hover:bg-white/10 transition-colors"
                   href={settings.bookingUrl}
                   target="_blank"
-                  rel="noreferrer"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Agendar
-                </a>
+                </ExternalLink>
               ) : null}
-              <a
+              <ExternalLink
                 className="block w-full text-center rounded-lg bg-[rgb(var(--primary))] px-4 py-2 text-sm font-medium text-white hover:bg-[rgb(var(--primary-light))] transition-colors"
                 href={settings.whatsappUrl}
                 target="_blank"
-                rel="noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Conversar
-              </a>
+              </ExternalLink>
             </div>
           </nav>
         </div>

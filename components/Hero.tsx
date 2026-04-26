@@ -1,11 +1,12 @@
 import Image from "next/image";
+import { ExternalLink } from "@/components/ExternalLink";
 
 type Settings = {
   fullName: string;
   shortBio: string;
   profilePhoto: string;
   crp?: string;
-  whatsappUrl: string;
+  whatsappUrl: string | null;
   email?: string;
 };
 
@@ -79,15 +80,14 @@ export function Hero({ settings }: { settings: Settings }) {
 
           {/* CTA */}
           <div className="pt-4 flex justify-center lg:justify-start">
-            <a
+            <ExternalLink
               className="inline-flex items-center justify-center px-8 py-3.5 bg-[rgb(var(--primary))] text-white font-medium rounded-lg hover:bg-[rgb(var(--primary-dark))] active:scale-95 transition-all duration-200 shadow-lg hover:shadow-xl"
               href={settings.whatsappUrl}
               target="_blank"
-              rel="noreferrer"
               aria-label="Agendar pelo WhatsApp"
             >
               Agendar conversa inicial
-            </a>
+            </ExternalLink>
           </div>
 
           <p className="text-xs text-[rgb(var(--muted))] italic">Atendimento 100% online</p>

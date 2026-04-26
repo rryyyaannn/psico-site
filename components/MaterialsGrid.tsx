@@ -1,9 +1,10 @@
 import Image from "next/image";
+import { ExternalLink } from "@/components/ExternalLink";
 
 export function MaterialsGrid({
   items
 }: {
-  items: { title: string; description: string; price?: string; image?: string; checkoutUrl: string }[];
+  items: { title: string; description: string; price?: string; image?: string; checkoutUrl: string | null }[];
 }) {
   return (
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -20,15 +21,14 @@ export function MaterialsGrid({
 
           <div className="mt-6 flex items-center justify-between gap-3">
             <div className="text-sm font-medium text-[rgb(var(--muted))]">{m.price ? m.price : "—"}</div>
-            <a
+            <ExternalLink
               className="inline-flex rounded-lg bg-[rgb(var(--primary))] px-4 py-2 text-sm font-medium text-white hover:bg-[rgb(var(--primary-dark))] transition-colors"
               href={m.checkoutUrl}
               target="_blank"
-              rel="noreferrer"
               aria-label={`Comprar ${m.title}`}
             >
               Comprar
-            </a>
+            </ExternalLink>
           </div>
         </article>
       ))}

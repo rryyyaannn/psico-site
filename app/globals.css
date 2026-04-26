@@ -2,25 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Tokens de Marca Premium */
+/* Tokens de Marca — Paleta Terra */
 :root {
-  --bg: 246 243 238;           /* off-white quente */
-  --surface: 251 250 247;       /* branco levemente quente */
-  --fg: 27 27 27;               /* quase-preto */
-  --muted: 107 107 107;         /* cinza quente */
-  
-  --card: 255 255 255;          /* branco puro para cards */
-  --surface-alt: 245 241 235;   /* alternativo */
-  
-  --primary: 102 122 96;        /* verde sálvia (primary) */
-  --primary-dark: 47 59 52;     /* verde profundo */
-  --primary-light: 165 180 150; /* verde claro/suave */
-  
-  --border: 231 225 216;        /* borda quente */
-  
+  --bg: 244 241 238;           /* #F4F1EE creme */
+  --surface: 250 248 245;       /* creme claro */
+  --surface-alt: 237 233 227;   /* creme escuro */
+  --fg: 91 64 41;               /* #5B4029 marrom quente */
+  --muted: 140 128 112;         /* marrom-cinza suave */
+
+  --card: 255 255 255;          /* branco puro */
+
+  --primary: 147 156 100;       /* #939C64 oliva */
+  --primary-dark: 68 76 21;     /* #444C15 oliva escuro */
+  --primary-light: 107 122 79;  /* #6B7A4F sálvia */
+
+  --border: 225 218 207;        /* borda quente */
+
   /* extras */
-  --brand: 102 122 96;
-  --brand-dark: 47 59 52;
+  --brown: 91 64 41;            /* #5B4029 */
+  --brand: 147 156 100;
+  --brand-dark: 68 76 21;
 }
 
 body {
@@ -74,8 +75,8 @@ body::before {
   position: fixed;
   inset: 0;
   background-image: 
-    radial-gradient(circle at 20% 50%, rgba(102, 122, 96, 0.02) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(165, 180, 150, 0.015) 0%, transparent 50%);
+    radial-gradient(circle at 20% 50%, rgba(147, 156, 100, 0.02) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(107, 122, 79, 0.015) 0%, transparent 50%);
   pointer-events: none;
   z-index: 0;
 }
@@ -83,5 +84,5 @@ body::before {
 /* Scroll suave global */
 html {
   scroll-behavior: smooth;
-  background: linear-gradient(135deg, rgb(var(--bg)) 0%, rgb(var(--surface-alt)) 100%);
+  background: rgb(var(--bg));
 }

@@ -1,0 +1,169 @@
+hero:
+  title: "Psi e humana"
+  subtitle: "Para uma vida leve e significativa"
+  description: >
+    Psicoterapia, planejamento de rotina e materiais para quem vive sobrecarregado,
+    com a mente acelerada e desconectado do presente.
+
+    Um espaço para compreender padrões emocionais, descobrir novas formas de existir
+    e construir uma vida mais consciente, leve e alinhada com quem você deseja ser.
+    Vamos juntos?
+  ctas:
+    primary:
+      label: "Quero fazer psicoterapia"
+      action: "psicoterapia"
+    secondary:
+      label: "Ver ferramentas"
+      action: "ferramentas"
+
+problem:
+  title: "Você já se sentiu assim?"
+  text: >
+    Por fora, talvez a sua vida continue funcionando. Você segue trabalhando,
+    sustentando relações, cumprindo responsabilidades e fazendo o que precisa ser feito.
+
+    Mas, por dentro, a mente não desacelera. Você pensa demais, antecipa cenários,
+    tenta evitar erros, controlar emoções, revisar decisões e impedir que algo negativo aconteça.
+
+    Aos poucos, isso se traduz em cansaço, inquietação e uma forma de viver guiada
+    mais pela prevenção do sofrimento do que pelo que faz sentido para você.
+
+    E isso não fica só dentro de você. Pode afetar a forma como se relaciona,
+    trabalha, descansa, se posiciona e conduz a própria rotina. Decisões passam
+    a ser tomadas pelo medo, conversas ficam mais tensas, o prazer diminui e até
+    conquistas importantes parecem perder o sabor.
+
+    A vida continua acontecendo — mas já não é vivida com presença, leveza e direção.
+
+impact:
+  title: "Como isso pode aparecer na sua vida:"
+  areas:
+    - title: "Nos relacionamentos"
+      items:
+        - "Dificuldades na comunicação"
+        - "Medo de errar, decepcionar ou frustrar"
+        - "Sensação de não ser digno de amor"
+        - "Oscilação entre se adaptar demais e se afastar"
+
+    - title: "Na rotina"
+      items:
+        - "Dias vividos no automático, sem presença"
+        - "Sensação de nunca ter feito o suficiente"
+        - "Dificuldade de descansar sem culpa"
+        - "Alternância entre excesso e travamento"
+
+    - title: "No trabalho e estudos"
+      items:
+        - "Dificuldade de desligar a mente"
+        - "Sensação constante de estar em falta"
+        - "Procrastinação"
+        - "Estresse e exaustão"
+
+    - title: "Na relação consigo"
+      items:
+        - "Autoestima fragilizada"
+        - "Autocrítica constante"
+        - "Foco nas falhas e erros"
+        - "Dificuldade de reconhecer o próprio valor e os próprios limites"
+
+    - title: "Emocionalmente"
+      items:
+        - "Sensação recorrente de esgotamento"
+        - "Ansiedade, culpa e estresse acumulados"
+        - "Desconexão de si e sensação de vazio"
+        - "Solidão e sensação de ter que dar conta de tudo sozinho"
+
+manifesto:
+  highlight: >
+    Meu trabalho é ajudar pessoas que estão cansadas de viver em um estado constante
+    de inquietação, controle excessivo e distanciamento de si.
+  text: >
+    A proposta não é apenas aliviar sintomas, mas compreender os padrões emocionais,
+    relacionais e cognitivos que sustentam esse modo de viver — para, a partir disso,
+    construir uma forma mais saudável, leve e significativa de existir.
+
+    Aqui, compreensão profunda e aplicação prática caminham juntas para que a mudança
+    não permaneça apenas no entendimento racional, mas possa ser vivida no cotidiano,
+    nas relações, nas escolhas e na forma como você conduz a própria vida.
+
+services:
+  title: "Para o seu desenvolvimento:"
+  items:
+    - title: "Psicoterapia"
+      description: >
+        Para compreender e mudar padrões emocionais com práticas validadas pela Psicologia,
+        específicas à sua demanda e ao seu contexto.
+      cta: "Ver mais"
+      status: "available"
+
+    - title: "Planejamento da rotina"
+      description: >
+        Para organizar sua vida de forma que você consiga cumprir seus papéis,
+        responsabilidades e prioridades sem se esgotar no processo, com mais equilíbrio
+        e presença no cotidiano.
+      cta: "Em breve"
+      status: "coming_soon"
+
+    - title: "Materiais"
+      description: >
+        Conteúdos para aprofundar temas como: motivação, regulação emocional,
+        relações mais leves e autoexigência.
+      cta: "Em breve"
+      status: "coming_soon"
+
+    - title: "Ferramentas"
+      description: >
+        Templates e baralhos para promover reflexões e direcionamento no dia a dia,
+        favorecendo o autoconhecimento, a construção de relações mais leves e o
+        alinhamento com o que é importante para você.
+      cta: "Em breve"
+      status: "coming_soon"
+
+method:
+  title: "Como funciona o meu trabalho?"
+  text: >
+    Meu trabalho parte de um princípio simples: não é possível construir mudanças
+    consistentes sem antes desenvolver clareza sobre como você está hoje.
+
+    Por isso, independentemente do formato — seja na psicoterapia, no planejamento
+    de rotina ou nos materiais —, existe sempre um convite à consciência.
+
+    Em alguns processos, isso acontece de forma mais estruturada, como na terapia
+    ou no planejamento de rotina, em que investigamos com profundidade seus padrões
+    e contexto de vida.
+
+    Em outros, acontece de forma mais dinâmica, como nos materiais e baralhos,
+    por meio de perguntas, reflexões e direcionamentos que te ajudam a se observar
+    e se compreender ao longo do processo.
+
+    A partir dessa consciência, construímos mudanças que realmente façam sentido
+    para você — respeitando seu contexto, seu ritmo e o momento em que se encontra.
+
+    Na psicoterapia, esse trabalho se dá de forma personalizada e aprofundada,
+    com base em abordagens como a Terapia Cognitivo-Comportamental e a Terapia do Esquema.
+
+    Nos demais formatos, esses mesmos princípios são organizados de forma prática,
+    para que você possa aplicar o processo no dia a dia, de maneira sustentável
+    e alinhada às suas necessidades.
+
+about:
+  title: "Conheça esta psi, Emanuele Bohry"
+  text: >
+    Desde cedo, estive em ambientes com muitas demandas, responsabilidades e pressão —
+    incluindo contextos organizacionais em nível de direção.
+
+    Essa vivência me deu uma compreensão profunda sobre como o excesso de cobrança,
+    a autoexigência e a dificuldade de descansar podem afetar a saúde mental,
+    os relacionamentos e a forma como conduzimos a vida.
+
+    Hoje, como psicóloga, trabalho com pessoas que vivem sobrecarregadas,
+    com a mente acelerada e desconectadas do presente — ajudando-as a compreender
+    seus padrões emocionais e a construir uma vida mais leve, consciente e significativa.
+
+footer:
+  social:
+    text: "Acompanhe meus conteúdos"
+    platform: "Instagram"
+  contact:
+    text: "Ainda tem dúvidas?"
+    channel: "WhatsApp"

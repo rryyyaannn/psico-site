@@ -39,3 +39,28 @@ testimonials:
       text: "Me senti acolhida e consegui entender padrões que eu repetia há anos."
     - name: "Pessoa B"
       text: "Aprendi a colocar limites e a me respeitar mais."
+
+products:
+  - title: "Psicoterapia"
+    description: "Atendimento individual para ansiedade, estresse, autocobrança e fases de transição. Um espaço seguro para elaborar e construir caminhos."
+    href: "#contato"
+  - title: "Planejamento de rotina"
+    description: "Organização de rotina e hábitos para mais equilíbrio e bem-estar no dia a dia."
+    href: "#contato"
+  - title: "Materiais"
+    description: "Recursos práticos — guias e exercícios para o seu dia a dia."
+    href: "#materiais"
+
+faq:
+  - question: "Como funciona a primeira sessão?"
+    answer: "A primeira sessão é um espaço de acolhimento e escuta. Conversamos sobre o que te trouxe até aqui, suas expectativas e como posso te ajudar. Sem pressão, no seu tempo."
+  - question: "O atendimento é online?"
+    answer: "Sim, todos os atendimentos são realizados 100% online, por videochamada, com a mesma qualidade e acolhimento de uma sessão presencial."
+  - question: "Quanto tempo dura o processo terapêutico?"
+    answer: "Cada pessoa tem seu ritmo. O processo é construído junto, respeitando seu momento e suas necessidades. Não existe prazo fixo."
+  - question: "Como faço para agendar?"
+    answer: "Você pode entrar em contato pelo WhatsApp ou pelo formulário de contato nesta página. Vou te responder o mais breve possível."
+
+events:
+  enabled: false
+  items: []
